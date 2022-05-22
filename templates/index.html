@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wage Correction Based On Gas Price</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+<section class="content">
+    <h1>Hourly wages adjusted for commute cost</h1>
+    <h2>This is going to hurt...</h2>
+    <form action="/" method="POST">
+        <label>Price Per Gallon </label><input type="number" name="price" placeholder="6.00" id="" step="0.01"><br>
+        <label>Vehicle MPG</label><input type="number" name="mpg" placeholder="18" id=""><br>
+        <label>Distance Round Trip</label><input type="number" name="distance_roundtrip" placeholder="30" id=""><br>
+        <label>Hourly Wage</label><input type="number" name="hourly_wage" placeholder="7.25" id="" step="0.01"><br>
+        <label>Average Hours Worked Daily</label><input type="number" name="hours_worked" placeholder="8" id=""><br>
+        <button type="submit">Submit</button>
+    </form>
+</section>
+</body>
+
+</html>
