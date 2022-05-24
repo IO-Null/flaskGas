@@ -21,16 +21,5 @@ def home():  # put application's code here
         return render_template('result.html', actual_hourly=actual_hourly)
     return render_template('index.html')
 
-@app.route("/calculate", methods=["GET", "POST"])
-def calculate():
-    form = GasCalculator()
-    if form.validate_on_submit():
-        return redirect(url_for("success"))
-    return render_template(
-        "calculate.jinja2",
-        form=form,
-        template="form-template"
-    )
-
 if __name__ == '__main__':
     app.run()
